@@ -1,0 +1,21 @@
+#header {
+  width: 10px;
+  height: 20px;
+  padding-left: 10px;
+}
+body {
+  background-color: #944141;
+  max-width: 30px;
+  font-size: 10px;
+}
+.container {
+  display: flex;
+  background-color: red;
+}
+.header-grid {
+  font-size: 10px;
+  color: blue;
+}
+.flex-grid {
+  color: #bb3434;
+}
