@@ -1,27 +1,74 @@
-@width: 10px;
-@height: @width + 10px;
-@def-color: #944141;
+@import "../../node_modules/normalize.css/normalize.css";
+@import "_mixins.less";
 
-#header {
-  width: @width;
-  height: @height;
-  padding-left: @width;
+.grid {
+  display: grid;
 }
-body {
-  background-color: @def-color;
-  max-width: @width + 20px;
-  font-size: @width;
-}
+
+body {}
 
 .container {
-  display: flex;
-  background-color: red;
+  max-width: 1169px;
+  margin: 0 auto;
 }
 
-.header-grid {
-  font-size: 20px - @width;
-  color: blue;
+header {
+  background-size: cover;
+  background-position: center;
+  background-color: @white1;
+  .icon-menu {
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    padding-top: 30px;
+    #header-icon {}
+    nav {
+      list-style-type: none;
+      grid-template-columns: repeat(8, auto);
+      a {
+        font-family: montserrat-medium-piroll, sans-serif;
+        font-size: 12px;
+        line-height: 24px;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        color: @black1;
+        padding: 15px;
+      }
+    }
+  }
+  .header-about {
+    grid-template-columns: auto minmax(150px, 525px);
+    margin-top: 181px;
+    margin-bottom: 201px; //маргин схлопнулся
+    h1 {
+      grid-column-start: 2;
+      font-family: montserrat-medium-piroll, sans-serif;
+      font-size: 38px;
+      line-height: 48px;
+      font-weight: 500;
+    }
+    p {
+      grid-column: 2;
+      font-family: nunitosansregular-regular-piroll, sans-serif;
+      font-size: 18px;
+      line-height: 28px;
+      margin: 32px 0;
+      margin-right: 59px; //маргин\паддинг сжимают текст при уменьшении разрешения
+    }
+    button {
+      grid-column-start: 2;
+      width: 180px;
+      height: 54px;
+      margin-top: 7px;
+      text-transform: uppercase;
+      font-family: montserrat-medium-piroll, sans-serif;
+      font-size: 12px;
+      line-height: 1;
+      color: @white;
+      background-color: @aqua;
+      border: 0;
+      padding: 0;
+    }
+  }
 }
-.flex-grid {
-  color: #bb3434;
-}
+// TODO: доделать кнопку.
