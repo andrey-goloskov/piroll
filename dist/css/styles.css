@@ -35,6 +35,9 @@ header .icon-menu {
   justify-content: space-between;
   padding-top: 30px;
 }
+header .icon-menu .header-icon {
+  padding: 14px;
+}
 header .icon-menu nav {
   list-style-type: none;
   grid-template-columns: repeat(8, auto);
