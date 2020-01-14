@@ -86,3 +86,19 @@ header .header-about button {
   border: 0;
   padding: 0;
 }
+.aboutus {
+  background-color: #ffffff;
+  justify-items: center;
+}
+.aboutus h2 {
+  font-family: montserrat-medium-piroll, sans-serif;
+  font-size: 30px;
+  line-height: 60px;
+}
+.aboutus p {
+  font-family: nunitosansregular-regular-piroll, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 601px;
+  text-align: center;
+}
