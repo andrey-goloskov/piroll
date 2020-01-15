@@ -5,18 +5,16 @@
   display: grid;
 }
 
-body {}
-
 header {
   background-color: @white1;
-  justify-content: center;
   .icon-menu {
     grid-template-columns: auto auto;
     justify-content: space-between;
     padding-top: 30px;
-    max-width: 1169px;
+    max-width: 1201px;
+    margin: auto;
     .header-icon {
-      padding: 15px;
+    padding: 15px;
     }
     nav {
       list-style-type: none;
@@ -33,57 +31,49 @@ header {
       }
     }
   }
-}
-
-.banner-container {
-  background-color: @white1;
-  height: 600px;
-  align-items: center;
-  .banner {
-    justify-self: start;
-
+  .banner-container {
+    height: 591px;
     grid-template-columns: auto minmax(150px, 525px);
-    max-width: 1169px;
+    max-width: 1201px;
     margin: 0 auto;
+    align-content: center;
+    padding: 0 15px;
     h1 {
       grid-column-start: 2;
       font-family: montserrat-medium-piroll, sans-serif;
       font-size: 38px;
       line-height: 48px;
-      font-weight: 500;
+      font-weight: 500; //Надо ли указывать? прописал же в миксинах, тест
     }
     p {
-      grid-column: 2;
+      grid-column-start: 2;
       font-family: nunitosansregular-regular-piroll, sans-serif;
       font-size: 18px;
       line-height: 28px;
-      margin: 32px 0;
-      margin-right: 59px; //маргин\паддинг сжимают текст при уменьшении разрешения
+      max-width: 482px;
     }
     button { // TODO: доделать кнопку.
       grid-column-start: 2;
-      width: 180px;
-      height: 54px;
-      margin-top: 7px;
-      text-transform: uppercase;
+      background-color: @aqua;
       font-family: montserrat-medium-piroll, sans-serif;
       font-size: 12px;
       line-height: 1;
       color: @white;
-      background-color: @aqua;
-      border: 0;
-      padding: 0;
+      text-transform: uppercase;
+      width: 180px;
+      height: 54px;
+      margin-top: 7px;
     }
   }
 }
 
 .aboutus {
-  height: 420px;
   background-color: @white;
+  height: 420px;
   justify-items: center;
   align-items: center;
-  .container-aboutus {
-    max-width: 1169px;
+  .aboutus-container {
+    max-width: 1201px;
     justify-items: center;
     padding: 0 15px;
     h2 {
@@ -97,5 +87,16 @@ header {
       line-height: 24px;
       max-width: 601px;
     }
+  }
+}
+
+.profskills {
+  height: 570px;
+  grid-template-columns: auto auto;
+  .left {
+    background-color: @white2;
+  }
+  .right {
+    background-color: @white1;
   }
 }
