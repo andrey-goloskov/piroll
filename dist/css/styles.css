@@ -2,7 +2,6 @@
 @font-face {
   font-family: 'montserrat-medium-piroll';
   src: url(../fonts/Montserrat-Medium.woff) format('woff');
-  font-weight: 500;
 }
 @font-face {
   font-family: 'nunitosansregular-regular-piroll';
@@ -11,12 +10,10 @@
 @font-face {
   font-family: 'worksans-medium-piroll';
   src: url(../fonts/work-sans-v5-latin-500.woff) format('woff');
-  font-weight: 500;
 }
 @font-face {
   font-family: 'peicon7stroke-piroll';
   src: url(../fonts/Pe-icon-7-stroke.woff) format('woff');
-  font-weight: 400;
 }
 .grid {
   display: grid;
@@ -106,11 +103,48 @@ header .banner-container button {
 }
 .profskills {
   height: 570px;
-  grid-template-columns: auto auto;
-}
-.profskills .left {
   background-color: #f8f9f9;
+  justify-items: center;
 }
-.profskills .right {
-  background-color: #e9e9e9;
+.profskills .profskills-container {
+  grid-template-columns: minmax(150px, 600px) minmax(150px, 601px);
+  align-items: center;
+  max-width: 1201px;
+}
+.profskills .profskills-container .left {
+  margin: 0 auto;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.profskills .profskills-container .left h2 {
+  padding: 0 15px;
+  margin: 0;
+  font-family: montserrat-medium-piroll, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+}
+.profskills .profskills-container .left ul {
+  padding: 0 15px;
+  list-style-type: none;
+  text-transform: uppercase;
+  font-family: montserrat-medium-piroll, sans-serif;
+  font-size: 12px;
+  line-height: 30px;
+}
+.profskills .profskills-container .left ul li:nth-child(2n-1) {
+  margin-top: 15px;
+}
+.profskills .profskills-container .right {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  background-image: url(../images/your_img_here.png);
+  background-size: cover;
+  overflow: hidden;
+}
+.numbers {
+  height: 240px;
+  background-color: #10c9c3;
+}
+.numbers .numbers-container {
+  max-width: 1201px;
 }
