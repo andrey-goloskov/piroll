@@ -11,10 +11,6 @@
   font-family: 'worksans-medium-piroll';
   src: url(../fonts/work-sans-v5-latin-500.woff) format('woff');
 }
-@font-face {
-  font-family: 'peicon7stroke-piroll';
-  src: url(../fonts/Pe-icon-7-stroke.woff) format('woff');
-}
 .grid {
   display: grid;
 }
@@ -25,7 +21,7 @@ header .icon-menu {
   grid-template-columns: auto auto;
   justify-content: space-between;
   padding-top: 30px;
-  max-width: 1201px;
+  max-width: 1200px;
   margin: auto;
 }
 header .icon-menu .header-icon {
@@ -48,7 +44,7 @@ header .icon-menu nav a {
 header .banner-container {
   height: 591px;
   grid-template-columns: auto minmax(150px, 525px);
-  max-width: 1201px;
+  max-width: 1200px;
   margin: 0 auto;
   align-content: center;
   padding: 0 15px;
@@ -86,7 +82,7 @@ header .banner-container button {
   align-items: center;
 }
 .aboutus .aboutus-container {
-  max-width: 1201px;
+  max-width: 1200px;
   justify-items: center;
   padding: 0 15px;
 }
@@ -107,9 +103,9 @@ header .banner-container button {
   justify-items: center;
 }
 .profskills .profskills-container {
-  grid-template-columns: minmax(150px, 600px) minmax(150px, 601px);
+  grid-template-columns: minmax(150px, 600px) minmax(150px, 600px);
   align-items: center;
-  max-width: 1201px;
+  max-width: 1200px;
 }
 .profskills .profskills-container .left {
   margin: 0 auto;
@@ -131,6 +127,9 @@ header .banner-container button {
   font-size: 12px;
   line-height: 30px;
 }
+.profskills .profskills-container .left ul span {
+  margin-left: 12px;
+}
 .profskills .profskills-container .left ul li:nth-child(2n-1) {
   margin-top: 15px;
 }
@@ -144,7 +143,43 @@ header .banner-container button {
 .numbers {
   height: 240px;
   background-color: #10c9c3;
+  align-content: center;
+  justify-items: center;
 }
 .numbers .numbers-container {
-  max-width: 1201px;
+  max-width: 1200px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: minmax(auto, 70px);
+}
+.numbers .numbers-container .numcell {
+  grid-template-columns: 60px minmax(70px, 230px);
+  grid-template-rows: 30px 30px;
+  color: #ffffff;
+  text-transform: uppercase;
+  align-items: center;
+  grid-column-gap: 15px;
+}
+.numbers .numbers-container .numcell > * {
+  margin: 0;
+}
+.numbers .numbers-container .numcell span {
+  align-self: center;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  font-size: 48px;
+  line-height: 30px;
+  padding-left: 10px;
+}
+.numbers .numbers-container .numcell h3 {
+  font-family: montserrat-medium-piroll, sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+}
+.numbers .numbers-container .numcell p {
+  font-family: montserrat-medium-piroll, sans-serif;
+  font-size: 12px;
+  line-height: 30px;
+  max-width: 230px;
 }

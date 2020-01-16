@@ -11,7 +11,7 @@ header {
     grid-template-columns: auto auto;
     justify-content: space-between;
     padding-top: 30px;
-    max-width: 1201px;
+    max-width: 1200px;
     margin: auto;
     .header-icon {
       padding: 15px;
@@ -34,7 +34,7 @@ header {
   .banner-container {
     height: 591px;
     grid-template-columns: auto minmax(150px, 525px);
-    max-width: 1201px;
+    max-width: 1200px;
     margin: 0 auto;
     align-content: center;
     padding: 0 15px;
@@ -73,7 +73,7 @@ header {
   justify-items: center;
   align-items: center;
   .aboutus-container {
-    max-width: 1201px;
+    max-width: 1200px;
     justify-items: center;
     padding: 0 15px;
     h2 {
@@ -95,9 +95,9 @@ header {
   background-color: @white2;
   justify-items: center;
   .profskills-container {
-    grid-template-columns: minmax(150px, 600px) minmax(150px, 601px);
+    grid-template-columns: minmax(150px, 600px) minmax(150px, 600px);
     align-items: center;
-    max-width: 1201px;
+    max-width: 1200px;
     .left {
       margin: 0 auto;
       grid-column-start: 1;
@@ -116,6 +116,9 @@ header {
         font-family: montserrat-medium-piroll, sans-serif;
         font-size: 12px;
         line-height: 30px;
+        span {
+          margin-left: 12px;
+        }
         li:nth-child(2n-1) {
           margin-top: 15px;
         }
@@ -135,7 +138,44 @@ header {
 .numbers {
   height: 240px;
   background-color: @aqua;
+
+  align-content: center;
+  justify-items: center;
   .numbers-container {
-    max-width: 1201px;
+    max-width: 1200px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: minmax(auto, 70px);
+    .numcell {
+      grid-template-columns: 60px minmax(70px, 230px);
+      grid-template-rows: 30px 30px;
+      color: @white;
+      text-transform: uppercase;
+      align-items: center;
+      grid-column-gap: 15px;
+      > * {
+        margin: 0;
+      }
+      span {
+        align-self: center;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        font-size: 48px;
+        line-height: 30px;
+        padding-left: 10px;
+      }
+      h3 {
+        font-family: montserrat-medium-piroll, sans-serif;
+        font-size: 18px;
+        line-height: 30px;
+      }
+      p {
+        font-family: montserrat-medium-piroll, sans-serif;
+        font-size: 12px;
+        line-height: 30px;
+        max-width: 230px;
+      }
+    }
   }
 }
