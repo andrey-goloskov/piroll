@@ -183,3 +183,33 @@ header .banner-container button {
   line-height: 30px;
   max-width: 230px;
 }
+.works {
+  min-height: 700px;
+  background-color: #f5f5f5;
+  justify-items: center;
+}
+.works-container {
+  max-width: 1200px;
+  grid-template-columns: repeat(auto-fill, minmax(149px, 300px));
+  grid-template-rows: repeat(5, 300px);
+}
+.works-container .work:first-child,
+.works-container .work:nth-child(3),
+.works-container .work:nth-child(8) {
+  background-color: #838383;
+}
+.works-container .work:nth-child(2),
+.works-container .work:nth-child(4),
+.works-container .work:nth-child(5),
+.works-container .work:nth-child(7) {
+  background-color: #dddddd;
+}
+.works-container .work:nth-child(6) {
+  background-color: #252525;
+}
+.works-container .loadmore {
+  justify-self: center;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  height: 100px;
+}
