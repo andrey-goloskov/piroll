@@ -180,14 +180,14 @@ header {
 }
 
 .works {
-  min-height: 700px;
   background-color: @white5;
-  justify-items: center;
   &-container {
+    margin: 0 auto;
     max-width: 1200px;
-    grid-template-columns: repeat(auto-fill, minmax(149px, 300px));
-    grid-template-rows: repeat(5, 300px);
+    grid-template-columns: repeat(auto-fill, 300px);
     .work {
+      height: 300px;
+      width: 300px;
       &:first-child,
       &:nth-child(3),
       &:nth-child(8) {
@@ -205,9 +205,9 @@ header {
     }
     .loadmore {
       justify-self: center;
-      grid-column-start: 1;
-      grid-column-end: 5;
+      align-content: center;
       height: 100px;
+      grid-column: 1 e('/') 5; // больше адаптивности, меньше медиатегов
     }
   }
 }
