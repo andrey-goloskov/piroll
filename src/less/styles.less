@@ -201,6 +201,19 @@ header {
       }
       &:nth-child(6) {
         background-color: @black4;
+        position: relative;
+        span::before {
+          position: absolute;
+          z-index: -1;
+          color: @white;
+          top: 126px;
+          left: 126px;
+          font-size: 48px;
+          line-height: 30px;
+        }
+        &:hover span::before {
+          z-index: 1;
+        }
       }
     }
     .loadmore {
@@ -208,6 +221,47 @@ header {
       align-content: center;
       height: 100px;
       grid-column: 1 e('/') 5; // больше адаптивности, меньше медиатегов
+      a {
+        font-size: 12px;
+        text-transform: uppercase;
+        padding: 41px;
+        text-decoration: none;
+        font-family: montserrat-medium-piroll, sans-serif;
+        color: @gray4;
+      }
+    }
+  }
+}
+
+.ourprocess {
+  height: 930px;
+  background-color: @white;
+  justify-items: center;
+  align-items: center;
+  &-container {
+    grid-template-columns: minmax(150px, 1004px); //из-за видео
+    grid-template-rows: auto auto minmax(571px); //эти попытки
+    justify-items: center;
+    max-width: 1200px;
+    h2 {
+      font-family: montserrat-medium-piroll, sans-serif;
+      font-size: 30px;
+      line-height: 60px;
+      color: @black1;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    p {
+      font-family: nunitosansregular-regular-piroll, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      color: @gray;
+      text-align: center;
+      max-width: 494px;
+      margin-bottom: 54px;
+    }
+    video {
+      object-fit: fill;
     }
   }
 }
